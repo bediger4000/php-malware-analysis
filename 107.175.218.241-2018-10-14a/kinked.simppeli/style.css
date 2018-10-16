@@ -1,0 +1,1131 @@
+/*
+Theme Name: Simppeli
+Theme URI: https://foxland.fi/downloads/simppeli
+Author: Sami Keijonen
+Author URI: http://foxland.fi/
+Description: A simple and accessible theme for bloggers and writers. It has beautiful typography and allows your content to be the most important part of your site.
+Version: 1.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: simppeli
+Tags: one-column, accessibility-ready, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, sticky-post, translation-ready, blog 
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Simppeli is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1 - Normalize
+2 - Typography
+3 - Elements
+4 - Forms
+5 - Navigation
+	5.1 - Links
+	5.2 - Menus
+6 - Accessibility
+7 - Alignments
+8 - Clearings
+9 - Widgets
+10 - Content
+    10.1 - Posts and pages
+	10.2 - Asides
+	10.3 - Comments
+11 - Infinite scroll
+12 - Media
+	12.1 - Captions
+	12.2 - Galleries
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+1 - Normalize
+--------------------------------------------------------------*/
+
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
+}
+
+body {
+	margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden],
+template {
+	display: none;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+img {
+	border: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 0;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+pre {
+	overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+button {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input {
+	line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	border: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+}
+
+optgroup {
+	font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
+	padding: 0;
+}
+
+
+/*--------------------------------------------------------------
+2 - Typography
+--------------------------------------------------------------*/
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: "Noto Serif", serif;
+	font-size: 100%;
+	line-height: 1.5;
+}
+
+@media (min-width: 37.5em) {
+	
+	body {
+		font-size: 1.125em;
+	}
+	
+}
+
+@media (min-width: 70em) {
+	
+	body {
+		font-size: 1.25em;
+	}
+	
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.site-title {
+	clear: both;
+	color: #111;
+	font-family: "Noto Sans", sans-serif;
+	line-height: 1.2;
+	margin: 0 0 3% 0;
+}
+
+h1,
+.site-title {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.625em;
+}
+h3 {
+	font-size: 1.375em;
+}
+h4 {
+	font-size: 1.125em;
+}
+h5 {
+	font-size: 1em;
+}
+h6 {
+	font-size: 1em;
+}
+
+p {
+	margin: 0 0 1.5em 0;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	border: 1px dotted #111;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+	word-wrap: normal;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+
+/*--------------------------------------------------------------
+3 - Elements
+--------------------------------------------------------------*/
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #fff; /* Fallback for when there is no custom background color defined. */
+	word-wrap: break-word;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	font-style: italic;
+	quotes: "" "";
+}
+
+hr {
+	background-color: #111;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em .5em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: .5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+/* Tables. */
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th,
+td {
+	padding: 6px 2%;
+}
+caption,
+th,
+td {
+	text-align: left;
+}
+caption {
+	margin: 1em 0;
+}
+th {
+	font-weight: bold;
+}
+
+/* wp-calendar <table> */
+
+#wp-calendar th,
+#wp-calendar td {
+	font-size: 14px;
+	font-size: 0.875rem;
+	padding: 4px 1%;
+	text-align: center;
+}
+#wp-calendar tr:hover td,
+#wp-calendar td.pad,
+#wp-calendar #prev,
+#wp-calendar #next {
+	background: transparent;
+}
+#wp-calendar #prev {
+	text-align: left;
+}
+#wp-calendar #next {
+	text-align: right;
+}
+
+
+/*--------------------------------------------------------------
+4 - Forms
+--------------------------------------------------------------*/
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	background: transparent;
+	border: 1px solid;
+	border-color: #111;
+	padding: .6em 1em;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	background: #111;
+	color: #fff;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	background: #111;
+	color: #fff;
+}
+
+input[type="number"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="password"],
+input[type="reset"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea,
+select {
+	border: 1px dotted #111;
+	display: block;
+	padding: 0.5em;
+	margin-bottom: 1.5em;
+}
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="password"]:focus,
+input[type="reset"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
+textarea:focus,
+select:focus {
+	border-style: solid;
+	color: #111;
+}
+
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea,
+select {
+	width: 100%;
+}
+
+.search-submit {
+	margin-bottom: 1.5em;
+}
+
+
+/*--------------------------------------------------------------
+5 - Navigation
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+5.1 - Links
+--------------------------------------------------------------*/
+
+a,
+a:visited {
+	color: #111;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #000;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+
+/*--------------------------------------------------------------
+5.2 - Menus
+--------------------------------------------------------------*/
+
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.main-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation li {
+	display: inline-block;
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	letter-spacing: 1px;
+	padding: 0.2em 0.3em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a {
+	font-weight: bold;
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 0 5%;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+
+/*--------------------------------------------------------------
+6 - Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+
+/*--------------------------------------------------------------
+7 - Alignments
+--------------------------------------------------------------*/
+
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/*--------------------------------------------------------------
+8 - Clearings
+--------------------------------------------------------------*/
+
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+
+/*--------------------------------------------------------------
+9 - Widgets
+--------------------------------------------------------------*/
+
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget. */
+.widget_search .search-submit {
+	display: none;
+}
+
+
+/*--------------------------------------------------------------
+10 - Content
+--------------------------------------------------------------*/
+
+.site {
+	padding: 1em 5%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 70em;
+}
+
+.site-header,
+.page-header,
+.entry-header {
+	text-align: center;
+}
+
+.site-header,
+.page-header {
+	border-bottom: 1px dotted #111;
+	margin-bottom: 5%;
+	padding-bottom: 5%;
+}
+.site-header {
+	padding-bottom: 0;
+}
+
+.page-header :last-child {
+	margin-bottom: 0;
+}
+
+.site-branding {
+	margin: 5% 0;
+}
+
+.site-title {
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin: 0;
+}
+.site-title a,
+.entry-title,
+.entry-title a,
+.page-title {
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.site-description {
+	font-style: italic;
+	margin: 0;
+}
+
+.main-navigation,
+.header-image {
+	padding-bottom: 5%;
+}
+
+.site-info {
+	padding: 1.5em 0;
+	text-align: center;
+}
+
+
+/*--------------------------------------------------------------
+10.1 - Posts and pages
+--------------------------------------------------------------*/
+
+.sticky {
+	display: block;
+}
+
+.entry,
+.hentry {
+	border-bottom: 1px dotted #111;
+	margin-bottom: 10%;
+	padding-bottom: 10%;
+}
+.single .entry,
+.single .hentry,
+.page .entry,
+.page .hentry {
+	margin-bottom: 5%;
+	padding-bottom: 5%;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary,
+.entry-footer,
+.comments-area {
+	color: #4d4d4d;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 37.5em;
+}
+
+.entry-meta {
+	padding-bottom: 1.5em;
+}
+
+.entry-meta,
+.entry-footer > .entry-footer-links {
+	font-size: 0.875em;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+.page-links a,
+.page-links > span {
+	border: 1px dotted #111;
+	display: inline-block;
+	padding: 0.25em 0.75em;
+	margin: 0 0.5em 0.5em 0;
+}
+.page-links > span.page-links-title {
+	border: 0;
+	padding: 0;
+}
+
+.entry-footer > .entry-footer-links {
+	padding-right: 1em;
+}
+
+.post-thumbnail > img,
+.mejs-container {
+	margin-bottom: 1.5em;
+}
+
+
+/*--------------------------------------------------------------
+10.2 - Asides
+--------------------------------------------------------------*/
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+
+/*--------------------------------------------------------------
+10.3 - Comments
+--------------------------------------------------------------*/
+
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+ol.comment-list,
+ol.comment-list ol.children {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.comment-list > li {
+	border-bottom: 1px dotted #111;
+	margin-bottom: 6%;
+	padding-bottom: 6%;
+}
+
+ol.comment-list ol.children ul {
+	margin-bottom: 0;
+}
+ol.comment-list ol.children {
+	margin-left: 2%;
+}
+
+ol.children .comment-body {
+	margin-top: 1.5em;
+}
+
+/* === Individual comments */
+
+.comment-meta {
+	margin-bottom: 1.5em;
+}
+
+li.comment .comment-wrap,
+li.ping .comment-wrap {
+	padding-bottom: 1em;
+	padding-top: 1em;
+}
+
+ol.comment-list ul,
+ol.comment-list ol,
+ol.comment-list dl {
+	margin-bottom: 1em;
+}
+ol.comment-list ul ul,
+ol.comment-list ol ol,
+ol.comment-list dl dl {
+	margin-bottom: 0;
+}
+
+.comment-metadata .edit-link {
+	padding-left: 1em;
+}
+
+.comment-author .avatar {
+	float: left;
+	margin-right: 1em;
+}
+
+
+/*--------------------------------------------------------------
+11 - Infinite scroll
+--------------------------------------------------------------*/
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+
+/*--------------------------------------------------------------
+12 - Media
+--------------------------------------------------------------*/
+
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+12.1 - Captions
+--------------------------------------------------------------*/
+
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0 auto;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+
+/*--------------------------------------------------------------
+12.2 - Galleries
+--------------------------------------------------------------*/
+
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
