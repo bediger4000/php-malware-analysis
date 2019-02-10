@@ -1,0 +1,166 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Exec-PHP\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2009-01-07 01:11+0100\n"
+"Last-Translator: Sören Weber <soeren@bluesome.net>\n"
+"Language-Team: Sören Weber <soeren@bluesome.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;__s;_es\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/admin.php:70
+msgid "No user matching the query."
+msgstr "Kein Benutzer erf&uuml;llt die Abfrage."
+
+#: includes/admin.php:71
+msgid "Exec-PHP Security Alert."
+msgstr "Exec-PHP Sicherheitsalarm."
+
+#: includes/admin.php:72
+msgid "The Exec-PHP plugin found a security hole with the configured user rights of this blog. For further information consult the plugin configuration menu or contact your blog administrator."
+msgstr "Das Exec-PHP Plugin hat ein Sicherheitsloch in der Konfiguration der Benutzerberechtigungen dieses Blogs gefunden. F&uuml;r weitere Informationen konsultiere das Konfigurationsmenu des Plugins oder kontaktiere deinen Administrator."
+
+#: includes/admin.php:74
+msgid "Exec-PHP AJAX HTTP error when receiving data: "
+msgstr "Exec-PHP AJAX HTTP Fehler beim Datenempfang: "
+
+#: includes/config_ui.php:49
+#: includes/user_ui.php:46
+#: includes/user_ui.php:48
+msgid "Exec-PHP Settings"
+msgstr "Exec-PHP Einstellungen"
+
+#: includes/config_ui.php:50
+msgid "Exec-PHP"
+msgstr "Exec-PHP"
+
+#: includes/config_ui.php:61
+#: includes/config_ui.php:164
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: includes/config_ui.php:70
+#: includes/config_ui.php:79
+msgid "Exec-PHP Error."
+msgstr "Exec-PHP Fehler."
+
+#: includes/config_ui.php:71
+#, php-format
+msgid "No necessary upgrade of the the Exec-PHP plugin could be performed. PHP code in your articles or widgets may be viewable to your blog readers. This is plugin version %1$s, previously there was version %2$s installed. Downgrading from a newer version to an older version of the plugin is not supported."
+msgstr "Ein notwendiges Upgrade des Exec-PHP Plugins konnte nicht ausgef&uuml;hrt werden. PHP Code in Artikeln oder Widgets ist u.U. f&uuml;r Leser sichtbar. Dies ist Plugin-Version %1$s, zuvor war Version %2$s installiert. Downgrading von einer neueren Version auf eine &auml;ltere Version des Plugins wird nicht unterst&uuml;tzt."
+
+#: includes/config_ui.php:80
+#, php-format
+msgid "An unknown error (%s) occured during execution of the Exec-PHP plugin. PHP code in your articles or widgets may be viewable to your blog readers. This error should never happen if you use the plugin with a compatible WordPress version and installed it as described in the documentation."
+msgstr "Es ist ein unbekannter Fehler (%s) w&auml;hrend der Ausf&uuml;hrung des Exec-PHP Plugins aufgetreten. PHP Code in Artikeln oder Widgets ist u.U. f&uuml;r Leser sichtbar. So ein Fehler sollte niemals passieren wenn das Plugin mit einer kompatiblen WordPress Version benutzt wird und wie in der Dokumentation beschrieben, installiert wurde."
+
+#: includes/config_ui.php:121
+msgid "The list can not be displayed because you may have disabled Javascript or your browser does not support Javascript."
+msgstr "Die Liste kann nicht angzeigt werden, weil Javascript deaktiviert ist oder der Browser kein Javascript unterst&uuml;tzt."
+
+#: includes/config_ui.php:127
+msgid "An animated icon signaling that this information is still be loaded."
+msgstr "Ein animiertes Symbol, das signalisiert, dass die Informationen noch geladen werden."
+
+#: includes/config_ui.php:127
+msgid "Loading user information..."
+msgstr "Lade Benutzer Informationen..."
+
+#: includes/config_ui.php:152
+msgid "Settings saved."
+msgstr "Einstellungen gespeichert."
+
+#: includes/config_ui.php:160
+msgid "Exec-PHP Plugin"
+msgstr "Exec-PHP Plugin"
+
+#: includes/config_ui.php:161
+#: includes/write_ui.php:46
+#: includes/write_ui.php:57
+msgid "readme.html"
+msgstr "readme-de_DE.html"
+
+#: includes/config_ui.php:161
+#, php-format
+msgid "Exec-PHP executes <code>&lt;?php ?&gt;</code> code in your posts, pages and text widgets. See the <a href=\"%s\">local documentation</a> for further information. The latest version of the plugin, documentation and information can be found on the <a href=\"http://bluesome.net/post/2005/08/18/50/\">official plugin homepage</a>."
+msgstr "Exec-PHP f&uuml;hrt <code>&lt;?php ?&gt;</code> Code in Beitr&auml;gen, Seiten und Text Widgets aus. F&uuml;r weitere Informationen lese die <a href='%s'>lokale Dokumentation</a>. Die neuste Version des Plugins, Dokumentation und Informationen k&ouml;nnen auf der <a href='http://bluesome.net/post/2005/08/18/50/'>offiziellen Plugin Homepage</a> gefunden werden."
+
+#: includes/config_ui.php:172
+msgid "Execute PHP code in text widgets"
+msgstr "F&uuml;hre PHP Code in Text Widgets aus"
+
+#: includes/config_ui.php:176
+msgid "Executing PHP code in text widgets is not restricted to any user. By default users who can modify text widgets will also be able to execute PHP code in text widgets. Unselect this option to generally turn off execution of PHP code in text widgets."
+msgstr "Das Ausf&uuml;hren von PHP Code in Text Widgets ist nicht an bestimmte Benutzer gebunden. Benutzer, die Text Widgets modifizieren k&ouml;nnen, sind auch in der Lage, PHP Code in Text Widgets auszuf&uuml;hren. Deaktiviere diese Einstellung, wenn die Ausf&uuml;hrung von PHP Code in Widgets abgeschaltet werden soll."
+
+#: includes/config_ui.php:185
+msgid "Save Changes"
+msgstr "&Auml;nderungen speichern"
+
+#: includes/config_ui.php:190
+msgid "Security Information"
+msgstr "Sicherheitsinformationen"
+
+#: includes/config_ui.php:191
+msgid "The following lists show which users are allowed to write or execute PHP code in different cases. Allowing to write or execute PHP code can be adjusted by assigning the necessary capabilities to individual users or roles by using a role manager plugin."
+msgstr "Die nachfolgenden Listen zeigen an, welche Benutzer f&uuml;r unterschiedliche F&auml;lle die Berechtigung haben PHP Code auszuf&uuml;hren. Das Ausf&uuml;hren von PHP Code kann durch das Zuweisen von Berechtigungen zu einzelnen Benutzern oder Rollen mit Hilfe eines Rollen-Manager Plugins eingestellt werden."
+
+#: includes/config_ui.php:196
+msgid "Security Hole"
+msgstr "Sicherheitsl&uuml;cke"
+
+#: includes/config_ui.php:197
+#, php-format
+msgid "The following list shows which users have either or both of the &quot;%1$s&quot; or &quot;%2$s&quot; capability and are allowed to change others PHP code by having the &quot;%3$s&quot; capability but do not have the &quot;%4$s&quot; capability for themself. This is a security hole, because the listed users can write and execute PHP code in articles of other users although they are not supposed to execute PHP code at all."
+msgstr "Die nachfolgende Liste zeigt an, welche Benutzer eine oder beide der  &quot;%1$s&quot; oder &quot;%2$s&quot; Berechtigungen besitzten und au&szlig;erdem durch die Zuweisung der &quot;%3$s&quot; Berechtigung den PHP Code anderer Benutzer &auml;ndern k&ouml;nnen aber denen es selbst durch eine fehlende &quot;%4$s&quot; Berechtigung nicht erlaubt ist PHP Code auszuf&uuml;hren. Dies stellt eine Sicherheitsl&uuml;cke dar, denn die aufgelisteten Benutzer k&ouml;nnen nun PHP Code in Artikel von anderen Benutzern schreiben und ausf&uuml;hren, obwohl sie eigentlich &uuml;berhaupt keinen PHP Code ausf&uuml;hren d&uuml;rfen."
+
+#: includes/config_ui.php:202
+msgid "Executing PHP Code in Text Widgets"
+msgstr "PHP Code in Text Widgets ausf&uuml;hren"
+
+#: includes/config_ui.php:203
+#, php-format
+msgid "The following list shows which users have the &quot;%s&quot; capability and therefore are allowed to write and execute PHP code in text widgets. In case you have deselected the option &quot;Execute PHP code in text widgets&quot; from above, this list will appear empty."
+msgstr "Die folgende Liste zeigt an, welche Benutzer die &quot;%s&quot; Berechtigung haben und dementsprechend in der Lage sind, PHP Code in Text Widgets auszuf&uuml;hren. Die Liste wird keine Eintr&auml;ge anzeigen f&uuml;r den Fall, dass die Option &quot;F&uuml;hre PHP Code in Text Widgets aus&quot; abgew&auml;hlt wurde."
+
+#: includes/config_ui.php:208
+msgid "Executing PHP Code in Articles"
+msgstr "PHP Code in Artikeln ausf&uuml;hren"
+
+#: includes/config_ui.php:209
+#, php-format
+msgid "The following list shows which users have the &quot;%s&quot; capability and therefore are allowed to execute PHP code in articles."
+msgstr "Die folgende Liste zeigt an, welche Benutzer die &quot;%s&quot; Berechtigung haben und dementsprechend in der Lage sind, PHP Code in Artikeln auszuf&uuml;hren."
+
+#: includes/user_ui.php:52
+msgid "Disable WYSIWYG Conversion Warning"
+msgstr "Exec-PHP WYSIWYG Konvertierungswarnung"
+
+#: includes/user_ui.php:56
+msgid "Select this option to turn off the WYSIWYG Conversion Warning in the Write menu. Nevertheless the recommended way is to switch off the WYSIWYG editor so you can be sure not to break existing PHP code by accident."
+msgstr "Aktiviere diese Option um die WYSIWYG Konvertierungswarnung abzuschalten. Nichtsdestotrotz ist der empfohlene Weg, den WYSIWYG Editor ganz abzuschalten um sicherzustellen, dass du keinen bestehenden PHP Code ausversehen zerst&ouml;rst."
+
+#: includes/write_ui.php:44
+msgid "Exec-PHP WYSIWYG Conversion Warning."
+msgstr "Exec-PHP WYSIWYG Konvertierungswarnung."
+
+#: includes/write_ui.php:45
+#, php-format
+msgid "Saving this article will render all contained PHP code permanently unuseful. Even if you are saving this article through the Code editor. You can turn off this warning in your user profile. Ignore this warning in case this article does not contain PHP code. <a href=\"%s\">Read the Exec-PHP documentation if you are unsure what to do next</a>."
+msgstr "Wenn dieser Artikel gespeichert wird, wird jeglicher in ihm enthaltener PHP Code dauerhaft zerst&ouml;rt. Selbst wenn dieser Artikel über den Code Editor gespeichert wird. Du kannst diese Warnung in deinem Benutzerprofil abschalten. Ignoriere diese Warnung, falls dieser Artikel keinen PHP Code enth&auml;lt. <a href=\"%s\">Lese die Exec-PHP Dokumentation, falls du nicht wei&szlig;t, was diese Warnung bedeutet</a>."
+
+#: includes/write_ui.php:55
+msgid "Exec-PHP Widget Conversion Warning."
+msgstr "Exec-PHP Widget Konvertierungswarnung."
+
+#: includes/write_ui.php:56
+#, php-format
+msgid "Saving the widgets will render all contained PHP code permanently unuseful. Ignore this warning in case the text widgets do not contain PHP code. <a href=\"%s\">Read the Exec-PHP documentation if you are unsure what to do next</a>."
+msgstr "Wenn die Widgets gespeichert werden, wird jeglicher in ihnen enthaltener PHP Code dauerhaft zerst&ouml;rt. Ignoriere diese Warnung, falls die Text Widgets keinen PHP Code enthalten. <a href=\"%s\">Lese die Exec-PHP Dokumentation, falls du nicht wei&szlig;t, was diese Warnung bedeutet</a>."
+

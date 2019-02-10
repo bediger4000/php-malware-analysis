@@ -1,0 +1,25 @@
+.execphp-user-list {
+	font-style: italic;
+	margin: 1em;
+}
+
+.execphp-user-list li {
+	float: left;
+	line-height: 1em;
+	width: 18em;
+}
+
+.execphp-user-list p {
+	text-align: center;
+}
+
+.execphp-user-list p * {
+	vertical-align: middle;
+}
+
+div#wpbody > div.wrap > form.wp-2-5 > fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
